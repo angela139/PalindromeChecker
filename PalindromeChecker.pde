@@ -16,12 +16,15 @@ public void setup()
 }
 public boolean palindrome(String word)
 {
+  // empty string to put modified version of word
   String newWord = "";
+  // makes new word without punctuation marks or letters
   for (int i = 0; i < word.length(); i++){
     if (Character.isLetter(word.charAt(i)) == true){
       newWord += word.substring(i, i+1);
     }
   }
+  // checks palindrome while ignoring uppercase/lowercase
   if (reverse(newWord).equalsIgnoreCase(newWord)){
     return true;
   }
